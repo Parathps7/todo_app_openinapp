@@ -1,0 +1,35 @@
+{
+  "name": "todo_app_openinapp",
+  "version": "1.0.0",
+  "description": "Made todo app for open in app assessment by Parath Safay",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parathps7/todo_app_openinapp.git"
+  },
+  "author": "Parath Safaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Parathps7/todo_app_openinapp/issues"
+  },
+  "homepage": "https://github.com/Parathps7/todo_app_openinapp#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "cron-jobs": "^1.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.0",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "twilio": "^4.23.0"
+  }
+}
