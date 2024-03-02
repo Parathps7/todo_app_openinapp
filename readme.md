@@ -24,3 +24,6 @@ TODO_APP_OPENINAPP/
 |-- index.js
 |-- script.js
 ```
+
+#Flowchart
+https://miro.com/app/board/uXjVNlnGnOE=/?share_link_id=141701713843
