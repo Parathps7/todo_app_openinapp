@@ -33,22 +33,6 @@ const taskSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-// Calculate priority based on due date
-taskSchema.methods.calculatePriority = function() {
-    const currentDate = new Date();
-    const timeDifference = this.due_date.getTime() - currentDate.getTime();
-    const hoursDifference = Math.ceil(timeDifference / (1000 * 60 * 60));
-
-    if (hoursDifference <= 24) {
-        return 0;
-    } else if (hoursDifference <= 72) {
-        return 1;
-    } else if (hoursDifference <= 120) {
-        return 2;
-    } else {
-        return 3;
-    }
-};
 
 // Pre-save hook to update task status and priority based on subtask completion
 taskSchema.pre('save', async function(next) {
