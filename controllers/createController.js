@@ -21,13 +21,31 @@ const createTask = asyncHandler(async (req, res) => {
         throw new Error("Task already exists with the same title");
     }
 
+    // Convert due_date to a Date object
+    const dueDate = new Date(due_date);
+
+    // Calculate priority based on due date proximity
+    let priority = 3; // Default priority
+    const currentDate = new Date();
+    const timeDifference = dueDate.getTime() - currentDate.getTime();
+    const hoursDifference = Math.ceil(timeDifference / (1000 * 60 * 60));
+
+    if (hoursDifference <= 24) {
+        priority = 0;
+    } else if (hoursDifference <= 48) {
+        priority = 1;
+    } else if (hoursDifference <= 96) {
+        priority = 2;
+    }
+
     try {
-        // Create task
+        // Create task with calculated priority
         const task = await Task.create({
             user: req.user.id, // Assuming user ID is stored in req.user after authentication
             title,
             description,
-            due_date
+            due_date: dueDate, // Assign parsed due_date
+            priority // Assign calculated priority
         });
 
         // Send response
