@@ -27,3 +27,11 @@ TODO_APP_OPENINAPP/
 
 #Flowchart
 https://miro.com/app/board/uXjVNlnGnOE=/?share_link_id=141701713843
+
+# Create a .env file with following parameters
+PORT=<PORT_NO>
+CONNECTION_STRING=<Database Connection string (MongoDb specifically)>
+ACCESS_TOKEN_SECRET=<Any strong secret key>
+TWILIO_ACCOUNT_SID=<TWILIO_TOKEN_ACCOUNT>
+TWILIO_AUTH_TOKEN=<TWILIO_TOKEN_AUTH>
+TWILIO_PHONE_NUMBER=<Twilio_phone_no>
